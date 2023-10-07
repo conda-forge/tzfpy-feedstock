@@ -1,5 +1,5 @@
 {% set name = "tzfpy" %}
-{% set version = "0.15.1" %}
+{% set version = "0.15.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/ringsaturn/tzfpy/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 43fb97de6fc2abf5021018a308095e296825b772e2c8c2fe6c49176b8a4de669
+  sha256: 2f5457e917304f5daf499728c56220365b49a0a59e687a196b389ce6b942446c
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<37]
   skip: true  # [win and python_impl=="pypy"]
   script:
