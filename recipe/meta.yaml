@@ -10,7 +10,7 @@ source:
   sha256: c1a440c2604a94438098416d3174a9e1e8bf38259de5c4e336f3588608ea7fa1
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   skip: true  # [win and python_impl=="pypy"]
   script:
@@ -27,6 +27,7 @@ requirements:
     - maturin >=1.2.1,<2                      # [build_platform != target_platform]
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
   host:
     - python
@@ -34,7 +35,6 @@ requirements:
     - pip
   run:
     - python
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
