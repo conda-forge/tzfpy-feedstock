@@ -1,5 +1,5 @@
 {% set name = "tzfpy" %}
-{% set version = "0.15.5" %}
+{% set version = "0.15.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ringsaturn/tzfpy/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c1a440c2604a94438098416d3174a9e1e8bf38259de5c4e336f3588608ea7fa1
+  sha256: dabd67f2bbac49a88b1bf3152e39778b5f95ba7b6676def1cfa8d67c0274ef69
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - maturin >=1.2.1,<2                      # [build_platform != target_platform]
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cargo-bundle-licenses
   host:
     - python
@@ -34,7 +35,6 @@ requirements:
     - pip
   run:
     - python
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
