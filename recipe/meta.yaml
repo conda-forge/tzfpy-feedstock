@@ -28,6 +28,7 @@ requirements:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}
     - cargo-bundle-licenses
+    - {{ stdlib("c") }}  # https://github.com/conda-forge/conda-forge.github.io/issues/2102
   host:
     - python
     - maturin >=1.7.1,<2
