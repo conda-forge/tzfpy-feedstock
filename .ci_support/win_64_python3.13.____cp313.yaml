@@ -3,7 +3,7 @@ c_compiler:
 c_stdlib:
 - vs
 channel_sources:
-- conda-forge/label/python_rc,conda-forge
+- conda-forge
 channel_targets:
 - conda-forge main
 pin_run_as_build:
@@ -18,7 +18,8 @@ rust_compiler:
 - rust
 target_platform:
 - win-64
+zfp:
+- '1.0'
 zip_keys:
 - - python
   - python_impl
-  - channel_sources
