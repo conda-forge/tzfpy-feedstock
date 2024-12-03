@@ -28,8 +28,6 @@ rust_compiler:
 - rust
 target_platform:
 - osx-arm64
-zfp:
-- '1.0'
 zip_keys:
 - - python
   - python_impl
