@@ -13,7 +13,6 @@ Development: https://github.com/ringsaturn/tzfpy
 
 Probably the fastest Python package to convert longitude/latitude to timezone name
 
-
 Current build status
 ====================
 
