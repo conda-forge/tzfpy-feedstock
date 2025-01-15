@@ -1,5 +1,5 @@
 context:
-  version: 0.16.1
+  version: "0.16.2"
 
 package:
   name: tzfpy
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ringsaturn/tzfpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 61b36367fbf0f6750340f640d44d608dc5d385b0e333e599b59fcf484258826d
+  sha256: 95b6db6eeaa359df4eaab3214954f0f5d146f5f7626dfbcb720b0bdc6cbdd7dd
 
 build:
   number: 0
@@ -19,11 +19,11 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
-      - python
-      - cross-python_${{ target_platform }}
-      - crossenv
-      - maturin >=1.2.1,<2
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - crossenv
+        - maturin >=1.2.1,<2
     - ${{ compiler('rust') }}
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
