@@ -10,7 +10,7 @@ source:
   sha256: 4f9814810b3ec48bc0f91d2575583ade2f0d7819635e766fca8021a7c5613426
 
 build:
-  number: 0
+  number: 1
   skip: win and python_impl == "pypy"
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
