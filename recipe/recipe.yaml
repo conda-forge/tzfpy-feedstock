@@ -1,5 +1,5 @@
 context:
-  version: "1.1.0"
+  version: "1.1.1"
 
 package:
   name: tzfpy
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/ringsaturn/tzfpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 1fa08649e2ce4f74fc937adc548c6da564960045f848d4ed04f3009e5fd2f0e1
+  sha256: 7e45698162e625931b294158de18727250f68681a0385faf3f3073eba56a9367
 
 build:
-  number: 1
+  number: 0
   skip: win and python_impl == "pypy"
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
