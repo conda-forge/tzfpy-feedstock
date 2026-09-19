@@ -1,5 +1,5 @@
 context:
-  version: "2.0.0"
+  version: "2.1.0"
 
 package:
   name: tzfpy
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ringsaturn/tzfpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 89255a19864da60e19689e6f0d005f8812d9ef3ca1d0c6c0f6d5c67b8a2f39ae
+  sha256: 1b511dc33cad8232b6afa83632e5bf969c4696db7f588de0ad1dde0a9f1b5944
 
 build:
   number: 0
