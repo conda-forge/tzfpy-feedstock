@@ -1,23 +1,26 @@
+MACOSX_SDK_VERSION:
+- '11.0'
 c_compiler:
-- vs2022
+- clang
+c_compiler_version:
+- '21'
 c_stdlib:
-- vs
+- macosx_deployment_target
+c_stdlib_version:
+- '11.0'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
+macos_machine:
+- arm64-apple-darwin20.0.0
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.12.* *_cpython
-python_impl:
-- cpython
+- 3.11.* *_cpython
 rust_compiler:
 - rust
 target_platform:
-- win-64
-zip_keys:
-- - python
-  - channel_sources
+- osx-arm64
